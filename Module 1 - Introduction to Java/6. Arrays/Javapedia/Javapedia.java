@@ -36,16 +36,13 @@ public class Javapedia {
           System.out.println("\n\tFigure " + (i+1));
           System.out.print("\t - Name: ");
           scan.nextLine();
-          String name = scan.nextLine();
-          database[i][0] = name;
+          database[i][0] = scan.nextLine();
 
           System.out.print("\t - Date of birth: ");
-          String dateOfBirth = scan.nextLine();
-          database[i][1] = dateOfBirth;
+          database[i][1] = scan.nextLine();
 
           System.out.print("\t - Occupation: ");
-          String occupation = scan.nextLine();
-          database[i][2] = occupation;
+          database[i][2] = scan.nextLine();
         }
 
         System.out.println("\nThese are the values you stored:");
@@ -96,6 +93,7 @@ public class Javapedia {
         for (int j = 0; j < array[i].length; j++) {
           System.out.print(array[i][j] + " ");
         }
+        System.out.print("\n");
       }
     }
 
