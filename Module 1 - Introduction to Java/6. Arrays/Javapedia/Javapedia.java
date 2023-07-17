@@ -48,7 +48,7 @@ public class Javapedia {
         System.out.println("\nThese are the values you stored:");
         //Task 4: call print2DArray.
         print2DArray(database);
-        System.out.println("\n");
+        
         System.out.println("\nWho do you want information on? ");
         String response = scan.nextLine();
 
