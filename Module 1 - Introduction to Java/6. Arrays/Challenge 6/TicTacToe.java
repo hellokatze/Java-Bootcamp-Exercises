@@ -60,6 +60,9 @@ public class TicTacToe {
       } else if (count == -3) {
         System.out.println("O wins!");
         break;
+      } else if (i == 8) {
+        System.out.println("~It's a tie~");
+        break;
       }
     }
 
@@ -159,7 +162,7 @@ public class TicTacToe {
     if (Math.abs(right) == 3)
       return right;
 
-    return -1;
+    return 1000;
   }
 
   public static int checkRows(char[][] board) {
@@ -173,10 +176,10 @@ public class TicTacToe {
         }
       }
 
-      if (!(Math.abs(count) == 3)) {
-        count = 0;
+      if (Math.abs(count) == 3) {
+        return count;
       } else {
-        break;
+        count = 0;
       }
     }
     return count;
@@ -193,10 +196,10 @@ public class TicTacToe {
         }
       }
 
-      if (!(Math.abs(count) == 3)) {
-        count = 0;
+      if (Math.abs(count) == 3) {
+        return count;
       } else {
-        break;
+        count = 0;
       }
     }
     return count;
@@ -211,17 +214,20 @@ public class TicTacToe {
         count--;
       }
 
-      if (!(Math.abs(count) == 3)) {
-        count = 0;
-      } else {
-        break;
-      }
     }
     return count;
   }
 
   public static int checkRight(char[][] board) {
     int count = 0;
+    for (int i = 0; i < board.length; i++) {
+      if (board[i][2-i] == 'X') {
+        count++;
+      } else if (board[i][2-i] == 'O') {
+        count--;
+      }
+
+    }
     return count;
   }
 
